@@ -1,5 +1,5 @@
 """NSFW endpoints for the PurrBot API."""
-from typing import Optional
+from typing import Optional, Literal
 from .base import BaseEndpoint
 
 class NsfwEndpoint(BaseEndpoint):
