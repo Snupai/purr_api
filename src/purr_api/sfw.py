@@ -157,13 +157,16 @@ class SfwEndpoint(BaseEndpoint):
         def __init__(self, parent_base_url: str):
             super().__init__(parent_base_url, "eevee")
 
-        def get(self) -> str:
+        def get(self, type: Literal["img", "gif"] = "img") -> str:
             """Get a random Eevee image.
+
+            Args:
+                type (Literal["img", "gif"]): The type of image to get.
 
             Returns:
                 str: URL to the image.
             """
-            response = self._make_request("img")
+            response = self._make_request(type)
             return self._handle_response(response)
 
     class _Feed(BaseEndpoint):
@@ -283,13 +286,16 @@ class SfwEndpoint(BaseEndpoint):
         def __init__(self, parent_base_url: str):
             super().__init__(parent_base_url, "neko")
 
-        def get(self) -> str:
+        def get(self, type: Literal["img", "gif"] = "img") -> str:
             """Get a random neko image.
+
+            Args:
+                type (Literal["img", "gif"]): The type of image to get.
 
             Returns:
                 str: URL to the image.
             """
-            response = self._make_request("img")
+            response = self._make_request(type)
             return self._handle_response(response)
 
     class _Pat(BaseEndpoint):
