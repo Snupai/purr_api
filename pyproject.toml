@@ -1,14 +1,10 @@
 [project]
-name = "purr-api"
+name = "purr_api"
 version = "0.1.0"
 description = "An unofficial Python wrapper for the PurrBot API (api.purrbot.site) - not affiliated with or endorsed by the PurrBot team"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = [
-    "build>=1.2.2.post1",
-    "requests>=2.31.0",
-    "twine>=6.1.0",
-]
+dependencies = ["requests>=2.31.0"]
 authors = [{ name = "Snupai", email = "nya@snupai.me" }]
 license = { text = "MIT" }
 classifiers = [
@@ -28,3 +24,6 @@ Repository = "https://github.com/Snupai/purr-api.git"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[project.optional-dependencies]
+test = ["pytest-mock>=3.12.0"]
