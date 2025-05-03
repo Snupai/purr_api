@@ -1,4 +1,4 @@
-from purr_api import Purr
+from purr_api.PurrBot import Purr
 import pytest
 import requests
 from unittest.mock import Mock, patch, ANY
